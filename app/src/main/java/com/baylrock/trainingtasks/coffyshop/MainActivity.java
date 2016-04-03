@@ -9,25 +9,29 @@ public class MainActivity extends AppCompatActivity {
     private int coffyOrder = 0;
    private  final int PRICE = 5;
     private TextView cups;
+   private TextView price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         cups = (TextView) findViewById(R.id.coof_num);
+        price = (TextView) findViewById(R.id.price_t);
     }
 
 
     public void inc(View view) {
         cups.setText("" + (++coffyOrder));
+        setPrice(price);
     }
 
     public void dec(View view) {
+        if (coffyOrder==0) return;
         cups.setText("" + (--coffyOrder));
+        setPrice(price);
     }
 
     public void setPrice(View view) {
-        TextView price = (TextView) findViewById(R.id.price_t);
         price.setText((coffyOrder*PRICE)+" $");
     }
 }
