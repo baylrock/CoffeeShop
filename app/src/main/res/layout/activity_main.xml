@@ -8,27 +8,37 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.baylrock.trainingtasks.coffyshop.MainActivity">
+    tools:context="com.baylrock.trainingtasks.coffyshop.MainActivity"
+    android:gravity="center">
 
-    <TextView
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:id="@+id/coof_num"/>
+        android:layout_gravity="center"
+        android:padding="20dp">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add to order"
-        android:onClick="inc"
-        android:id="@+id/button" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="dec from order"
-        android:onClick="dec"
-        android:id="@+id/button2" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to order"
+            android:onClick="inc"
+            android:id="@+id/button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/coof_num"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dec from order"
+            android:onClick="dec"
+            android:id="@+id/button2" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -42,4 +52,5 @@
         android:text="get price"
         android:id="@+id/button3"
         android:onClick="setPrice"/>
+
 </LinearLayout>
