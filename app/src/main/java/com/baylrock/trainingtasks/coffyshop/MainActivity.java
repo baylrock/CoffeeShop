@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private int coffyOrder = 0;
@@ -31,7 +32,11 @@ public class MainActivity extends AppCompatActivity {
         setPrice(price);
     }
 
-    public void setPrice(View view) {
-        price.setText((coffyOrder*PRICE)+" $");
+    private  void setPrice(TextView view) {
+        view.setText((coffyOrder*PRICE)+" $");
+    }
+
+    public void maOrder(View view) {
+        Toast.makeText(getApplicationContext(),"PROFIT",Toast.LENGTH_SHORT).show();
     }
 }

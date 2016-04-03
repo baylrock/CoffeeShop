@@ -9,14 +9,25 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.baylrock.trainingtasks.coffyshop.MainActivity"
-    android:gravity="center">
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="Americano 5$"
+        android:paddingBottom="20dp"
+        android:layout_weight="1"/>
+
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:layout_weight="1">
+
 
 
         <Button
@@ -45,13 +56,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 $"
-        android:id="@+id/price_t" />
+        android:id="@+id/price_t"
+        android:layout_weight="1"/>
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="get price"
-        android:id="@+id/button3"
-        android:onClick="setPrice"/>
+        android:text="Make order"
+        android:layout_gravity="end"
+        android:layout_weight="0"
+        android:onClick="maOrder"
+        />
+
 
 </LinearLayout>
