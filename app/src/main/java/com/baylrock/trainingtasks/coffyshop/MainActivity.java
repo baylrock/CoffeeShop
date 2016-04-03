@@ -28,6 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void setPrice(View view) {
         TextView price = (TextView) findViewById(R.id.price_t);
-        price.setText("" + (coffyOrder*PRICE));
+        price.setText((coffyOrder*PRICE)+" $");
     }
 }
