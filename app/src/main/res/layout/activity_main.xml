@@ -17,8 +17,17 @@
         android:layout_gravity="center_vertical"
         android:text="Americano 5$"
         android:paddingBottom="20dp"
-        android:layout_weight="1"/>
+        android:layout_weight="0"
+        android:onClick="creamCheck"/>
 
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cream"
+        android:layout_weight="0"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/checkBox" />
 
     <LinearLayout
         android:orientation="horizontal"

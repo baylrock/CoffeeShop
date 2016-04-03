@@ -3,12 +3,14 @@ package com.baylrock.trainingtasks.coffyshop;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private int coffyOrder = 0;
-   private  final int PRICE = 5;
+   private  final int BASIC_PRICE = 5;
+    private int priceAdds = 0;
     private TextView cups;
    private TextView price;
 
@@ -33,10 +35,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private  void setPrice(TextView view) {
-        view.setText((coffyOrder*PRICE)+" $");
+        view.setText((coffyOrder*(BASIC_PRICE+priceAdds))+" $");
     }
 
     public void maOrder(View view) {
         Toast.makeText(getApplicationContext(),"PROFIT",Toast.LENGTH_SHORT).show();
+    }
+
+    public void creamCheck(View view) {
+        CheckBox isCream = (CheckBox) view;
+        if (isCream.isChecked()) {
+           priceAdds = 2;
+        } else {
+            priceAdds = 0;
+        }
+        setPrice(price);
     }
 }
