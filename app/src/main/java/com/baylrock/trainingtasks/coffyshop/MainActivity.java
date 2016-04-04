@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private int priceAdds = 0;
     private TextView cups;
    private TextView price;
+    private int currentDeposit = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +36,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private  void setPrice(TextView view) {
-        view.setText((coffyOrder*(BASIC_PRICE+priceAdds))+" $");
+        view.setText((currentDeposit= coffyOrder*(BASIC_PRICE+priceAdds))+" $");
     }
 
     public void maOrder(View view) {
-        Toast.makeText(getApplicationContext(),"PROFIT",Toast.LENGTH_SHORT).show();
+        if (currentDeposit==0) return;
+        Toast.makeText(getApplicationContext(),"Give me YOUR " + currentDeposit + " BUCKS NIGA!!!",Toast.LENGTH_SHORT).show();
     }
 
     public void creamCheck(View view) {

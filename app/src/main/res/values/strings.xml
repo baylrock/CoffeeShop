@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">CoffyShop</string>
+    <string name="app_name">CoffeeShop</string>
+    <string name="cream">Cream</string>
+    <string name="_0">0 $</string>
+    <string name="make_order">Make order</string>
+    <string name="americano_5">Americano 5$</string>
+    <string name="dec_from_order">dec from order</string>
+    <string name="coof_num">0</string>
+    <string name="add_to_order">Add to order</string>
 </resources>

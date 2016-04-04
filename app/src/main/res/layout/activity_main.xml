@@ -15,18 +15,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:text="Americano 5$"
+        android:text="@string/americano_5"
         android:paddingBottom="20dp"
-        android:layout_weight="0"
-        android:onClick="creamCheck"/>
+        android:layout_weight="0" />
 
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cream"
+        android:text="@string/cream"
         android:layout_weight="0"
         android:layout_gravity="center_vertical"
+        android:onClick="creamCheck"
         android:id="@+id/checkBox" />
 
     <LinearLayout
@@ -42,21 +42,21 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add to order"
+            android:text="@string/add_to_order"
             android:onClick="inc"
             android:id="@+id/button" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/coof_num"
             android:textSize="20sp"
             android:id="@+id/coof_num"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="dec from order"
+            android:text="@string/dec_from_order"
             android:onClick="dec"
             android:id="@+id/button2" />
     </LinearLayout>
@@ -64,7 +64,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0 $"
+        android:text="@string/_0"
         android:id="@+id/price_t"
         android:layout_weight="1"/>
 
@@ -72,7 +72,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Make order"
+        android:text="@string/make_order"
         android:layout_gravity="end"
         android:layout_weight="0"
         android:onClick="maOrder"
